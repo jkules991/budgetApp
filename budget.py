@@ -14,6 +14,14 @@ class Budget():
     def deposit(self, amount):
         self.balance += amount
         return amount
+
+food = Budget(500)
+with open("food.txt", "w") as file1:
+    file1.write(str(food.balance))
+
+bills = Budget(200)
+with open("bills.txt", "w") as file1:
+    file1.write(str(bills.balance))
     
 # food = Budget(500)
 
@@ -26,26 +34,26 @@ class Budget():
 # print(food)
 # print(bills)
 
-control = True
-food = 0
-bills = 0
+# control = True
+# food = 0
+# bills = 0
 
-while control:
-    print("Menu: click 1 for option a, or 2 for option b")
-    input1 = int(input("Please enter your choice: "))
+# while control:
+#     print("Menu: click 1 for option a, or 2 for option b")
+#     input1 = int(input("Please enter your choice: "))
     
-    if input1 == 1:
-        food = Budget(500)
-    elif input1 == 2:
-        bills = Budget(200)
-    elif input1 == 0:
-        control = False
-    else:
-        print("Invalid Option")
+#     if input1 == 1:
+#         food = Budget(500)
+#     elif input1 == 2:
+#         bills = Budget(200)
+#     elif input1 == 0:
+#         control = False
+#     else:
+#         print("Invalid Option")
     
-    if food:
-        print(food)
-    if bills:
-        print(bills)
+#     if food:
+#         print(food)
+#     if bills:
+#         print(bills)
 
 
